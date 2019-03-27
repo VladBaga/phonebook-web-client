@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone-Book</title>
+
+    <link rel="stylesheet"  type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<h1>Phone-book</h1>
+
+<table id="phone-books">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>PhoneNumber</th>
+        <th>Age</th>
+    </tr>
+    </thead>
+
+    <tbody>
+  <!-- <tr>
+        <td>Learn HTML</td>
+        <td>15.03</td>
+        <td><input type="checkbox" title="Done"></td>
+    </tr>
+     <tr>
+        <td>Learn CSS</td>
+        <td>16.03</td>
+        <td><input type="checkbox" title="Done"></td>
+    </tr> -->
+    </tbody>
+</table>
+
+<h3>Add new item</h3>
+<form id="create-phone-book-form">
+    <input type="text" name="name" title="Name" placeholder="Name">
+    <input type="text" name="surname" title="Surname" placeholder="Surname">
+    <input type="number" name="phoneNumber" title="PhoneNumber" placeholder="PhoneNumber">
+    <input type="number" name="age" title="Age" placeholder="Age">
+    <button type="submit">Save</button>
+</form>
+
+<script src="js/lib/jquery-3.3.1.js"></script>
+<script src="js/phone-book.js"></script>
+
+</body>
+</html>
