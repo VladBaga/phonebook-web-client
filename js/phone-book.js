@@ -33,6 +33,7 @@ window.Phonebook = {
  <td class="surname">${item.surname}</td>
  <td class="phoneNumber">${item.phoneNumber}</td>
   <td class="age">${item.age}</td>
+   <td><a href="#" class="fa fa-trash delete" data-id="${item.id}"></a></td>
 </tr>`
     },
 

@@ -7,7 +7,7 @@
     <link rel="stylesheet"  type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body bgcolor= "#f5deb3">
 
 <h1>Phone-book</h1>
 
@@ -20,7 +20,13 @@
         <th>Age</th>
     </tr>
     </thead>
-
+    <tfoot>
+    <tr>
+        <td colspan="4">
+            <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+        </td>
+    </tr>
+    </tfoot>
     <tbody>
   <!-- <tr>
         <td>Learn HTML</td>
@@ -35,7 +41,7 @@
     </tbody>
 </table>
 
-<h3>Add new item</h3>
+<h3>Add Phone-book log :</h3>
 <form id="create-phone-book-form">
     <input type="text" name="name" title="Name" placeholder="Name">
     <input type="text" name="surname" title="Surname" placeholder="Surname">

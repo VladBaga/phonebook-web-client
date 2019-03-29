@@ -1,22 +1,104 @@
 #phone-books {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+    border: 4px solid #792396;
+    background-color: #555555;
     width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#phone-books, h1{
+    text-align: center;
+}
+
+#phone-books, h3{
+    text-align: center;
+}
+
+input[type=text], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=number], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button[type=submit], select {
+    padding: 5px;
+}
+div {
+    border-radius: 5px;
+    padding: 5px;
 }
 
 #phone-books td, #phone-books th {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #555555;
+    padding: 5px 2px;
 }
 
-#phone-books tr:nth-child(even){background-color: #f2f2f2;}
+#phone-books tbody, #phone-books td{
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
 
-#phone-books tr:hover {background-color: #ddd;}
+#phone-books thead{
+    background: #792396;
+    border-bottom: 4px solid #792396;
+}
 
-#phone-books th {
+#phone-books thead, #phone-books th{
+    font-size: 19px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #792396;
+}
+
+#phone-books tfoot{
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #CE3CFF;
+    background: -moz-linear-gradient(top, #da6dff 0%, #d34fff 66%, #CE3CFF 100%);
+    background: -webkit-linear-gradient(top, #da6dff 0%, #d34fff 66%, #CE3CFF 100%);
+    background: linear-gradient(to bottom, #da6dff 0%, #d34fff 66%, #CE3CFF 100%);
+    border-top: 5px solid #792396;
+}
+
+#phone-books tfoot, #phone-books td{
+    font-size: 13px;
+}
+
+#phone-books tfoot .links{
+    text-align: right;
+}
+#phone-books tfoot .links a{
+    display: inline-block;
+    background: #792396;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+#phone-books tr:nth-child(even){background: #CC3BFC;}
+
+/*#phone-books tr:hover {background-color: #ddd;}
+
+/*#phone-books th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: #800080;
     color: white;
 }
