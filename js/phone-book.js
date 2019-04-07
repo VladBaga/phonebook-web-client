@@ -34,7 +34,7 @@ window.Phonebook = {
  <td class="phoneNumber">${item.phoneNumber}</td>
   <td class="age">${item.age}</td>
    <td><a href="#" class="fa fa-trash delete" data-id="${item.id}"></a></td>
-   <td><a href="#" class="far fa-edit" "data-id="${item.id}"></a></td>
+   <td><a href="#" class="fa fa-edit put" "data-id="${item.id}"></a></td>
 </tr>`
     },
 
@@ -75,11 +75,20 @@ window.Phonebook = {
         });
     },
 
-    updateItem: function(id){
+    updateItem: function(){
+
+        var name = $("input[title='Name']").val();
+        var surname = $("input[title='Surname']").val();
+        var data = {
+            'name': name,
+            'surname': surname,
+        };
         $.ajax(
             {
-                url: Phonebook.apiUrl + '?id=' + id,
-                method: "UPDATE"
+                url: Phonebook.apiUrl,
+                method: "PUT",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(data)
             }).done(function (response) {
             console.log(response);
             //reload items table
@@ -106,7 +115,7 @@ window.Phonebook = {
             Phonebook.deleteItem(id);
         });
 
-        $('#phone-books tr').delegate(".update", 'click', function () {
+        $('#phone-books tbody').delegate('.put', 'click', function () {
             var id = $(this).data('id');
 
             Phonebook.updateItem(id);

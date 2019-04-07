@@ -34,7 +34,10 @@ input[type=number], select {
     box-sizing: border-box;
 }
 button[type=submit], select {
-    padding: 5px;
+    padding: 3px;
+}
+button[type=reset], select {
+    padding: 3px;
 }
 div {
     border-radius: 5px;
