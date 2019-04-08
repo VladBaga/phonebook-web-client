@@ -75,7 +75,7 @@ window.Phonebook = {
         });
     },
 
-    updateItem: function(){
+    updateItem: function(id){
 
         var name = $("input[title='Name']").val();
         var surname = $("input[title='Surname']").val();
@@ -85,7 +85,7 @@ window.Phonebook = {
         };
         $.ajax(
             {
-                url: Phonebook.apiUrl,
+                url: Phonebook.apiUrl + '?id=' + id,
                 method: "PUT",
                 contentType: "application/json; charset=utf-8",
                 data: JSON.stringify(data)
