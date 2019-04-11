@@ -69,7 +69,7 @@ window.Phonebook = {
                 method: "DELETE"
             }).done(function (response) {
             console.log(response);
-            //reload items table
+            //reload item table
 
             Phonebook.getItems(response);
         });
