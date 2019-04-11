@@ -34,7 +34,7 @@ window.Phonebook = {
  <td class="phoneNumber">${item.phoneNumber}</td>
   <td class="age">${item.age}</td>
    <td><a href="#" class="fa fa-trash delete" data-id="${item.id}"></a></td>
-   <td><a href="#" class="fa fa-edit put" "data-id="${item.id}"></a></td>
+   <td><a href="#" class="fa fa-edit put" data-id="${item.id}"></a></td>
 </tr>`
     },
 
@@ -79,9 +79,13 @@ window.Phonebook = {
 
         var name = $("input[title='Name']").val();
         var surname = $("input[title='Surname']").val();
+        var phoneNumber = $("input[title='PhoneNumber']").val();
+        var age = $("input[title='Age']").val();
         var data = {
             'name': name,
             'surname': surname,
+            'phoneNumber': phoneNumber,
+            'age': age
         };
         $.ajax(
             {
